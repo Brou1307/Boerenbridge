@@ -1,0 +1,398 @@
+body{margin:0}
+
+
+#closeApp {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+html,body {
+font-family:"Segoe UI",Arial,sans-serif;
+font-size:15px;
+line-height:1.5;
+overflow: hidden;
+}
+
+.close {
+margin: 0px;
+}
+
+
+h1{
+font-weight:400;
+margin:10px 0
+}
+
+hr{
+border:0;
+border-top:5px solid ;
+margin:20px 0
+}
+
+a{
+color:
+inherit
+}
+
+.w3-display-middle{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+
+.w3-animate-opacity{
+animation:opac 0.8s
+}
+
+@keyframes opac{
+from{opacity:0} to{opacity:1}
+}
+
+.w3-animate-top{
+position:relative;
+animation:animatetop 0.4s
+}
+
+@keyframes animatetop{
+from{top:-300px;opacity:0} to{top:0;opacity:1}
+}
+
+.w3-jumbo{
+font-size:64px
+}
+
+.w3-center{
+text-align:center
+}
+
+.w3-text-white{
+color:#fff
+}
+
+.w3-border-grey{
+border-color:red
+}
+
+body, html {
+height: 100%
+}
+
+
+.bgimg {
+  background-image: url('bridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+#closeApp{
+position: fixed;
+top: 0;
+right: 0;
+
+cursor: pointer;
+}
+
+
+
+
+body, html {
+  margin: 0;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  font-family:"Segoe UI",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.5
+}
+
+
+
+html {
+  background-image: url('bridge.jpg');
+  background-color: #D8D8F6;
+  }
+  
+.lightbox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5)
+}
+.toolbarLB {
+  text-align: right;
+  padding: px;
+}
+.closeLB {
+  color: black;
+  cursor: pointer;
+}
+.lightbox .iframeContainer {
+  vertical-align: middle;
+  background: #494850;
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: black;
+}
+.lightbox.closed {
+  display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.topper{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+label, input {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+input {
+opacity: 100;
+}
+
+table.ex2 {
+empty-cells: hide;
+}
+
+td {
+text-align: center;
+}
+
+p {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.nulistwintig{
+background-color: rgba(0,0,0,0.8);
+color: white;
+}
+
+.nulistien {
+background-color: rgba(245, 245, 247,0.8);
+}
+
+input {
+background-color: rgba(245, 245, 247,0.0);
+border: 0px;
+}
+
+.top td {
+padding: 5px;
+background-color: rgba(245, 245, 247,0.8);
+}
+
+.nulistwintig input {
+background-color: rgba(0,0,0,0.0);
+color: white;
+}
+
+.topname {
+color: antiquewhite;
+min-width: auto;
+width: 100px;
+font-size: 17px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.wit{
+color: white;
+}
+
+table {
+margin-right: 20px;
+}
+  
+.oblique{
+font-style: oblique;
+}
+
+#speler4, #speler5, #speler6 {
+display: block;
+}
+
+#modalContainer {
+    background-color:rgba(0, 0, 0, 0.3);
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:10000;
+    background-image:url(tp.png); /* required by MSIE to prevent actions on lower z-index elements */
+}
+
+#alertBox {
+    position:relative;
+    width:300px;
+    min-height:100px;
+    margin-top:225px;
+    border:1px solid #666;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:20px 30px;
+}
+
+#modalContainer > #alertBox {
+    position:fixed;
+}
+
+#alertBox h1 {
+    margin:0;
+    font:bold 0.9em verdana,arial;
+    background-color:rgba(0,0,0,0.8);
+    color:#FFF;
+    border-bottom:1px solid #000;
+    padding:2px 0 2px 5px;
+}
+
+#alertBox p {
+    font:0.9em verdana,arial;
+    height:50px;
+    padding-top: 20px;
+    padding-left:10px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#alertBox #closeBtn, #closeBtn2 {
+    display:block;
+    position:relative;
+    margin:5px auto;
+    padding:7px;
+    border:0 none;
+    width:70px;
+    font:0.7em verdana,arial;
+    text-transform:uppercase;
+    text-align:center;
+    color:#FFF;
+    background-color:rgba(0,0,0,0.8);
+    border-radius: 3px;
+    text-decoration:none;
+}
+.hovertekst, .hovertekst2, .hovertekst3 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  min-height: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.aantal:hover + .hovertekst {
+  display: block;
+}
+
+.aantal2:hover + .hovertekst2 {
+  display: block;
+}
+
+.aantal3:hover + .hovertekst3 {
+  display: block;
+}
+
+.buttons {
+height: 50px;
+margin: 20px;
+
+}
+
+
+.aantal, .aantal2, .aantal3 {
+background-color: white;
+box-sizing: border-box;
+border-radius: 8px;
+cursor: pointer;  
+}
+
+::placeholder {
+font-style: oblique;
+font-size: 11px;
+}
+
+.ptop {
+text-align: center;
+font-weight: 1000;
+color: white;
+}
+
+tr:last-child {
+color: #fff;
+}
+
+td > p {
+font-weight: 900;
+}
+
+.smalltext {
+    display: none;
+}
+
+.fulltext{
+ display: block;
+}
+
+.ronde1{
+width: 10px;
+    margin: 0px;
+
+}
+
+@media only screen and (max-width: 1100px) {
+table {
+    border-collapse: separate;
+    text-indent: initial;
+      border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    
+}
+.smalltext {
+    display: block;
+}
+
+.fulltext {
+ display: none;
+}
+ 
+td{
+max-width: 80px;
+font-size: 11px;
+}
+}
+

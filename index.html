@@ -1,0 +1,30 @@
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./styles.css" />
+
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">BOERENBRIDGE</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center"><a href='game.html'></li>START</p></a>
+  </div>
+
+
+    <button id="closeApp">X</button>
+
+  
+</div>
+<script>
+const {ipcRenderer} = require('electron');
+const closeApp = document.getElementById('closeApp');
+closeApp.addEventListener('click', () => {
+    ipcRenderer.send('close-me')
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<html>
+<title>Boerenbridge</title>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="close">
+        <button id="closeApp">X</button>
+    </div>
+
+    <div class="lightbox">
+        <div class="iframeContainer">
+            <div class="toolbarLB">
+                <span class="closeLB" onclick="lightBoxClose()">x</span>
+            </div>
+            <p class="ptop"> Aantal spelers: </p>
+            <div class="buttons">
+
+                <button class="aantal" onclick="myFunction4()">4 SPELERS</button>
+
+
+                <button class="aantal2" onclick="myFunction5()">5 SPELERS</button>
+
+
+                <button class="aantal3" onclick="myFunction6()">6 SPELERS</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="aantal" onclick="myFunction4()" ondblclick="reloader()">4 SPELERS</button>
+        <p class="hovertekst">Dubbelklik om alle inhoud te wissen. <br> Klik één keer om vier spelers te selecteren</p>
+
+        <button class="aantal2" onclick="myFunction5()" ondblclick="reloader()">5 SPELERS</button>
+        <p class="hovertekst2">Dubbelklik om alle inhoud te wissen. <br> Klik één keer om vijf spelers te selecteren</p>
+
+        <button class="aantal3" onclick="adder(); myFunction6()" ondblclick="reloader()">6 SPELERS</button>
+        <p class="hovertekst3">Dubbelklik om alle inhoud te wissen. <br> Klik één keer om zes spelers te selecteren</p>
+
+
+    </div>
+
+    <div class="topper">
+
+        <!---------------------------------------------------------------------------Begin van tabel speler 1 ------------------------------------------------------------->
+
+
+        <table class="ex2" border="1">
+
+            <tr>
+                <td colspan=4>
+                    <input class="remover topname" autocomplete="off" type='text' maxlength='15' id="eerstenaam">
+                    </input>
+                </td>
+
+            </tr>
+
+            <tr class="top">
+                <td class="ronde1"> <span class="ronde1"> R </span> </td>
+                <td> <span class="fulltext"> Gevraagd</span> <span class="smalltext"> Gv </span></td>
+                <td> <span class="fulltext"> Gekregen</span> <span class="smalltext"> gk </span></td>
+                <td> <span class="fulltext"> Punten </span> <span class="smalltext"> pt </span></td>
+            </tr>
+
+            <tr class="nulistien">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">1z </p>
+                </td>
+
+                <td>
+                    <div class='form-unam'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='Eerste' class="remover"
+                            onkeyup="roundtotal10('Eerste', 'tweede', 'results1'); moveOnMax(this,document.getElementById('40')); adder()"
+                            placeholder="Delen" onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-unam'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='tweede' class="remover"
+                            onkeyup="roundtotal10('Eerste', 'tweede', 'results1'); moveOnMax(this,document.getElementById('78'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results1" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien twee" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">1 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='derde'
+                            onkeyup="roundtotal10('derde', 'vierde', 'results2'); moveOnMax(this,document.getElementById('41'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='vierde'
+                            onkeyup="roundtotal10('derde', 'vierde', 'results2'); moveOnMax(this,document.getElementById('42'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results2" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien drie " STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">2 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='vijf'
+                            onkeyup="roundtotal10('vijf', 'zes', 'results3'); moveOnMax(this,document.getElementById('43'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='zes'
+                            onkeyup="roundtotal10('vijf', 'zes', 'results3'); moveOnMax(this,document.getElementById('44'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results3" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien vier" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">3 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='zeven'
+                            onkeyup="roundtotal10('zeven', 'acht', 'results4'); moveOnMax(this,document.getElementById('45'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='acht'
+                            onkeyup="roundtotal10('zeven', 'acht', 'results4'); moveOnMax(this,document.getElementById('46'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results4" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien vijf" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">4 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvier" id='negen'
+                            onkeyup="roundtotal10('negen', 'tien' , 'results5');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('48'), document.getElementById('47')); adder()"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='tien'
+                            onkeyup="roundtotal10('negen', 'tien' , 'results5'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('86'), document.getElementById('48'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results5" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien zes" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">5 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvijf" id='elf'
+                            onkeyup="roundtotal10('elf', 'twaalf' , 'results6'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('49'), document.getElementById('50'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='twaalf'
+                            onkeyup="roundtotal10('elf', 'twaalf' , 'results6');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('50'), document.getElementById('88'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results6" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistwintig zeven" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">6 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenzes" id='dertien'
+                            onkeyup="roundtotal20('dertien', 'veertien', 'results7'); moveOnMax(this,document.getElementById('51'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='veertien'
+                            onkeyup="roundtotal20('dertien', 'veertien' , 'results7'); moveOnMax(this,document.getElementById('52'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results7" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistwintig acht" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">7 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='vijftien'
+                            onkeyup="roundtotal20('vijftien', 'zestien' , 'results8'); moveOnMax(this,document.getElementById('53'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='zestien'
+                            onkeyup="roundtotal20('vijftien', 'zestien' , 'results8'); moveOnMax(this,document.getElementById('54'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results8" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistwintig negen" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">8 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvier" id='zeventien'
+                            onkeyup="roundtotal20('zeventien', 'achtien' , 'results9'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('56'), document.getElementById('55'));adder()"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='achtien'
+                            onkeyup="roundtotal20('zeventien', 'achtien' , 'results9'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('94'), document.getElementById('56'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results9" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistwintig tien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">8z </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='negentien'
+                            onkeyup="roundtotal20('negentien', 'twintig', 'results10'); moveOnMax(this,document.getElementById('57'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='twintig'
+                            onkeyup="roundtotal20('negentien', 'twintig', 'results10'); moveOnMax(this,document.getElementById('58'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results10" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistwintig elf" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">7</p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvijf" id='eenentwintig'
+                            onkeyup="roundtotal20('eenentwintig', 'tweeentwintig', 'results11'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('59'), document.getElementById('60'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='tweeentwintig'
+                            onkeyup="roundtotal20('eenentwintig', 'tweeentwintig' , 'results11'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('60'), document.getElementById('98'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results11" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistwintig twaalf" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">6 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='drieentwintig'
+                            onkeyup="roundtotal20('drieentwintig', 'vierentwintig', 'results12'); moveOnMax(this,document.getElementById('61'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='vierentwintig'
+                            onkeyup="roundtotal20('drieentwintig', 'vierentwintig', 'results12'); moveOnMax(this,document.getElementById('62'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results12" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien dertien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">5 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvier delenzes" id='vijfentwintig'
+                            onkeyup="roundtotal10('vijfentwintig', 'zesentwintig', 'results13'); ; moveOnMax2(this,document.getElementById('speler5'),document.getElementById('64'), document.getElementById('63'));adder()"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='zesentwintig'
+                            onkeyup="roundtotal10('vijfentwintig', 'zesentwintig', 'results13'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('102'), document.getElementById('64'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results13" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien veertien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">4 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='zevenentwintig'
+                            onkeyup="roundtotal10('zevenentwintig', 'achtentwintig', 'results14'); moveOnMax(this,document.getElementById('65'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='achtentwintig'
+                            onkeyup="roundtotal10('zevenentwintig', 'achtentwintig', 'results14'); moveOnMax(this,document.getElementById('66'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results14" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien vijftien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">3</p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='negentwintig'
+                            onkeyup="roundtotal10('negentwintig', 'dertig', 'results15'); moveOnMax(this,document.getElementById('67'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='dertig'
+                            onkeyup="roundtotal10('negentwintig', 'dertig', 'results15'); moveOnMax(this,document.getElementById('68'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results15" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien zestien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">2 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvijf" id='eenendertig'
+                            onkeyup="roundtotal10('eenendertig', 'tweeendertig', 'results16');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('69'), document.getElementById('70'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='tweeendertig'
+                            onkeyup="roundtotal10('eenendertig', 'tweeendertig', 'results16');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('70'), document.getElementById('108'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results16" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien zeventien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">1 </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover delenvier" id='drieendertig'
+                            onkeyup="roundtotal10('drieendertig', 'vierendertig', 'results17');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('72'), document.getElementById('71'));adder()"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='vierendertig'
+                            onkeyup="roundtotal10('drieendertig', 'vierendertig', 'results17');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('110'), document.getElementById('72'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results17" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr class="nulistien achtien" STYLE="visibility: hidden;">
+                <td class="ronde1">
+                    <p class="ronde1" type="number">1z </p>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='vijfendertig'
+                            onkeyup="roundtotal10('vijfendertig', 'zesendertig', 'results18'); moveOnMax(this,document.getElementById('74'))"
+                            onblur="getthetotal1()" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <div class='form-uname'>
+                        <label for='nameField2'></label>
+                        <input class="remover" id='zesendertig'
+                            onkeyup="roundtotal10('vijfendertig', 'zesendertig', 'results18'); moveOnMax(this,document.getElementById('75'))"
+                            onchange="getthetotal1()" onblur="" type='text' maxlength='1'></input>
+                    </div>
+                </td>
+                <td>
+                    <p id="results18" class="num1"> </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan=4>
+                    <p id="total1" class="totaless" type='text'> <span class="oblique"> </span> </p>
+                </td>
+            </tr>
+
+        </table>
+        </form>
+        <!---------------------------------------------------------------------------Begin van tabel speler 2 ------------------------------------------------------------->
+        <div id="speler2">
+
+            <table class="ex2" border="1">
+
+                <tr>
+                    <td colspan=3>
+                        <input class="remover topname" autocomplete="off" type='text' maxlength='15' id="tweedenaam">
+                        </input>
+                    </td>
+                </tr>
+
+                <tr class="top">
+                    <td> <span class="fulltext"> Gevraagd</span> <span class="smalltext"> Gv </span></td>
+                    <td> <span class="fulltext"> Gekregen</span> <span class="smalltext"> gk </span></td>
+                    <td> <span class="fulltext"> Punten </span> <span class="smalltext"> pt </span></td>
+                </tr>
+
+                <tr class="nulistien">
+                    <td>
+                        <div class='form-unam'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='39'
+                                onkeyup="roundtotal10('39', '40', 'results20'); moveOnMax(this,document.getElementById('76'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='40'
+                                onkeyup="roundtotal10('39', '40', 'results20'); moveOnMax(this,document.getElementById('77'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results20" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien twee" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='41'
+                                onkeyup="roundtotal10('41', '42', 'results21'); moveOnMax(this,document.getElementById('79')); adder()"
+                                placeholder="Delen" onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='42'
+                                onkeyup="roundtotal10('41', '42', 'results21'); moveOnMax(this,document.getElementById('445'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results21" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien drie" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='43'
+                                onkeyup="roundtotal10('43', '44', 'results22'); moveOnMax(this,document.getElementById('80'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='44'
+                                onkeyup="roundtotal10('43', '44', 'results22'); moveOnMax(this,document.getElementById('81'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results22" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vier" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='45'
+                                onkeyup="roundtotal10('45', '46', 'results23'); moveOnMax(this,document.getElementById('82'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='46'
+                                onkeyup="roundtotal10('45', '46', 'results23'); moveOnMax(this,document.getElementById('83'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results23" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='47'
+                                onkeyup="roundtotal10('47', '48', 'results24'); moveOnMax(this,document.getElementById('84'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='48'
+                                onkeyup="roundtotal10('47', '48', 'results24'); moveOnMax(this,document.getElementById('85'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results24" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zes" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier" id='49'
+                                onkeyup="roundtotal10('49', '50', 'results25');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('87'), document.getElementById('86')); adder()"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='50'
+                                onkeyup="roundtotal10('49', '50', 'results25');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('453'), document.getElementById('87'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results25" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig zeven" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='51'
+                                onkeyup="roundtotal20('51', '52', 'results26');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('88'), document.getElementById('89'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='52'
+                                onkeyup="roundtotal20('51', '52', 'results26'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('89'), document.getElementById('455'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results26" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig acht" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='53'
+                                onkeyup="roundtotal20('53', '54', 'results27'); moveOnMax(this,document.getElementById('90'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='54'
+                                onkeyup="roundtotal20('53', '54', 'results27'); moveOnMax(this,document.getElementById('91'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results27" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig negen" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='55'
+                                onkeyup="roundtotal20('55', '56', 'results28'); moveOnMax(this,document.getElementById('92'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='56'
+                                onkeyup="roundtotal20('55', '56', 'results28'); moveOnMax(this,document.getElementById('93'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results28" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig tien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier" id='57'
+                                onkeyup="roundtotal20('57', '58', 'results29'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('95'), document.getElementById('94')); adder()"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='58'
+                                onkeyup="roundtotal20('57', '58', 'results29'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('461'), document.getElementById('95'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results29" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig elf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='59'
+                                onkeyup="roundtotal20('59', '60', 'results30'); moveOnMax(this,document.getElementById('96'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='60'
+                                onkeyup="roundtotal20('59', '60', 'results30'); moveOnMax(this,document.getElementById('97'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results30" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig twaalf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='61'
+                                onkeyup="roundtotal20('61', '62', 'results31'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('98'), document.getElementById('99'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='62'
+                                onkeyup="roundtotal20('61', '62', 'results31'); ; moveOnMax2(this,document.getElementById('speler5'),document.getElementById('99'), document.getElementById('465'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results31" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien dertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='63'
+                                onkeyup="roundtotal10('63', '64', 'results32'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('100'), document.getElementById('100'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='64'
+                                onkeyup="roundtotal10('63', '64', 'results32'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('101'), document.getElementById('101'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results32" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien veertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier delenzes" id='65'
+                                onkeyup="roundtotal10('65', '66', 'results33'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('103'), document.getElementById('102')); adder()"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='66'
+                                onkeyup="roundtotal10('65', '66', 'results33'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('469'), document.getElementById('103'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results33" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijftien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='67'
+                                onkeyup="roundtotal10('67', '68', 'results34'); moveOnMax(this,document.getElementById('104'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='68'
+                                onkeyup="roundtotal10('67', '68', 'results34'); moveOnMax(this,document.getElementById('105'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results34" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zestien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='69'
+                                onkeyup="roundtotal10('69', '70', 'results35'); moveOnMax(this,document.getElementById('106'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='70'
+                                onkeyup="roundtotal10('69', '70', 'results35'); moveOnMax(this,document.getElementById('107'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results35" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zeventien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='71'
+                                onkeyup="roundtotal10('71', '72', 'results36');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('108'), document.getElementById('109'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='72'
+                                onkeyup="roundtotal10('71', '72', 'results36');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('109'), document.getElementById('475'))"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results36" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien achtien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier" id='74'
+                                onkeyup="roundtotal10('74', '75', 'results37');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('111'), document.getElementById('110')); adder()"
+                                onblur="getthetotal()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='75'
+                                onkeyup="roundtotal10('74', '75', 'results37'); moveOnMax(this,document.getElementById('111'))"
+                                onchange="getthetotal()" onblur="" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results37" class="num"> </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan=3>
+                        <p id="result" class="totaless" type='text'> <span class="oblique"> </span> </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!---------------------------------------------------------------------------Begin van tabel speler 3 ------------------------------------------------------------->
+        <div id="speler3">
+
+            <table class="ex2" border="1">
+
+                <tr>
+                    <td colspan=3>
+                        <input class="remover topname" autocomplete="off" type='text' maxlength='15' id="derdenaam">
+                        </input>
+                    </td>
+                </tr>
+
+                <tr class="top">
+                    <td> <span class="fulltext"> Gevraagd</span> <span class="smalltext"> Gv </span></td>
+                    <td> <span class="fulltext"> Gekregen</span> <span class="smalltext"> gk </span></td>
+                    <td> <span class="fulltext"> Punten </span> <span class="smalltext"> pt </span></td>
+                </tr>
+                <tr class="nulistien">
+                    <td>
+                        <div class='form-unam'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='76'
+                                onkeyup="roundtotal10('76', '77', 'results38'); moveOnMax(this,document.getElementById('441'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-unam'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='77'
+                                onkeyup="roundtotal10('76', '77', 'results38'); moveOnMax(this,document.getElementById('442'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results38" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien twee" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='78'
+                                onkeyup="roundtotal10('78', '79', 'results39'); moveOnMax(this,document.getElementById('443'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='79'
+                                onkeyup="roundtotal10('78', '79', 'results39'); moveOnMax(this,document.getElementById('444'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results39" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien drie" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='80'
+                                onkeyup="roundtotal10('80', '81', 'results40'); moveOnMax(this,document.getElementById('446')); adder()"
+                                placeholder="Delen" onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='81'
+                                onkeyup="roundtotal10('80', '81', 'results40');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zeven'), document.getElementById('557'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results40" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vier" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='82'
+                                onkeyup="roundtotal10('82', '83', 'results41'); moveOnMax(this,document.getElementById('447'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='83'
+                                onkeyup="roundtotal10('82', '83', 'results41'); moveOnMax(this,document.getElementById('448'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results41" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='84'
+                                onkeyup="roundtotal10('84', '85', 'results42'); moveOnMax(this,document.getElementById('449'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='85'
+                                onkeyup="roundtotal10('84', '85', 'results42'); moveOnMax(this,document.getElementById('450'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results42" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zes" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='86'
+                                onkeyup="roundtotal10('86', '87', 'results43'); moveOnMax(this,document.getElementById('451'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='87'
+                                onkeyup="roundtotal10('86', '87', 'results43'); moveOnMax(this,document.getElementById('452'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results43" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig zeven" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier" id='88'
+                                onkeyup="roundtotal20('88', '89', 'results44'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('454'), document.getElementById('453')); adder()"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='89'
+                                onkeyup="roundtotal20('88', '89', 'results44');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vijftien'), document.getElementById('454'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results44" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig acht" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='90'
+                                onkeyup="roundtotal20('90', '91', 'results45'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('455'), document.getElementById('456'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='91'
+                                onkeyup="roundtotal20('90', '91', 'results45'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('456'), document.getElementById('567'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results45" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig negen" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='92'
+                                onkeyup="roundtotal20('92', '93', 'results46'); moveOnMax(this,document.getElementById('457'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='93'
+                                onkeyup="roundtotal20('92', '93', 'results46'); moveOnMax(this,document.getElementById('458'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results46" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig tien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='94'
+                                onkeyup="roundtotal20('94', '95', 'results47'); moveOnMax(this,document.getElementById('459'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='95'
+                                onkeyup="roundtotal20('94', '95', 'results47'); moveOnMax(this,document.getElementById('460'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results47" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig elf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier" id='96'
+                                onkeyup="roundtotal20('96', '97', 'results48'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('462'), document.getElementById('461')); adder()"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='97'
+                                onkeyup="roundtotal20('96', '97', 'results48'); moveOnMax2(this,document.getElementById('speler5'),document.getElementById('drieentwintig'), document.getElementById('462'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results48" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig twaalf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='98'
+                                onkeyup="roundtotal20('98', '99', 'results49'); moveOnMax(this,document.getElementById('463'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='99'
+                                onkeyup="roundtotal20('98', '99', 'results49'); moveOnMax(this,document.getElementById('464'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results49" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien dertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='100'
+                                onkeyup="roundtotal10('100', '101', 'results50'); ; moveOnMax2(this,document.getElementById('speler5'),document.getElementById('465'), document.getElementById('466'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='101'
+                                onkeyup="roundtotal10('100', '101', 'results50');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('466'), document.getElementById('577'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results50" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien veertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='102'
+                                onkeyup="roundtotal10('102', '103', 'results51'); moveOnMax(this,document.getElementById('467'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='103'
+                                onkeyup="roundtotal10('102', '103', 'results51'); moveOnMax(this,document.getElementById('468'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results51" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijftien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier delenzes" id='104'
+                                onkeyup="roundtotal10('104', '105', 'results52');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('470'), document.getElementById('469')); adder()"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='105'
+                                onkeyup="roundtotal10('104', '105', 'results52');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('eenendertig'), document.getElementById('470'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results52" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zestien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='106'
+                                onkeyup="roundtotal10('106', '107', 'results53'); moveOnMax(this,document.getElementById('471'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='107'
+                                onkeyup="roundtotal10('106', '107', 'results53'); moveOnMax(this,document.getElementById('472'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results53" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zeventien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='108'
+                                onkeyup="roundtotal10('108', '109', 'results54'); moveOnMax(this,document.getElementById('473'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='109'
+                                onkeyup="roundtotal10('108', '109', 'results54'); moveOnMax(this,document.getElementById('474'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results54" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien achtien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='110'
+                                onkeyup="roundtotal10('110', '111', 'results55');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('475'), document.getElementById('476'))"
+                                onblur="getthetotal3()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='111'
+                                onkeyup="roundtotal10('110', '111' , 'results55'); moveOnMax(this,document.getElementById('476'))"
+                                onchange="getthetotal3()" onblur="" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results55" class="num3"> </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan=3>
+                        <p id="result3" class="totaless" type='text'> <span class="oblique"> </span> </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!---------------------------------------------------------------------------Begin van tabel speler 4 ------------------------------------------------------------->
+        <div id="speler4">
+
+            <table class="ex2" border="1">
+
+                <tr>
+                    <td colspan=3>
+                        <input class="remover topname" autocomplete="off" type='text' maxlength='15' id="vierdenaam">
+                        </input>
+                    </td>
+                </tr>
+
+                <tr class="top">
+                    <td> <span class="fulltext"> Gevraagd</span> <span class="smalltext"> Gv </span></td>
+                    <td> <span class="fulltext"> Gekregen</span> <span class="smalltext"> gk </span></td>
+                    <td> <span class="fulltext"> Punten </span> <span class="smalltext"> pt </span></td>
+                </tr>
+
+                <tr class="nulistien">
+                    <td>
+                        <div class='form-unam'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='441'
+                                onkeyup="roundtotal10('441', '442', 'results401');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('Eerste'), document.getElementById('551') )"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-unam'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='442'
+                                onkeyup="roundtotal10('441', '442', 'results401');looper('.twee');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('tweede'), document.getElementById('552') )"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results401" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien twee" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='443'
+                                onkeyup="roundtotal10('443', '444', 'results402');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('derde'), document.getElementById('553') )"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='444'
+                                onkeyup="roundtotal10('443', '444', 'results402'); looper('.drie');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vierde'), document.getElementById('554'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results402" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien drie" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='445'
+                                onkeyup="roundtotal10('445', '446', 'results403');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vijf'), document.getElementById('555'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='446'
+                                onkeyup="roundtotal10('445', '446', 'results403'); looper('.vier'); ;moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zes'), document.getElementById('556'))"
+                                onblur="getthetotal4()" onchange="looper('.vier')" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results403" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vier" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='447'
+                                onkeyup="roundtotal10('447', '448', 'results404');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('acht'), document.getElementById('558')); adder()"
+                                onblur="getthetotal4()" placeholder="Delen" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='448'
+                                onkeyup="roundtotal10('447', '448', 'results404'); looper('.vijf');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('47'), document.getElementById('negen'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results404" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='449'
+                                onkeyup="roundtotal10('449', '450', 'results405');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('negen'), document.getElementById('559'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='450'
+                                onkeyup="roundtotal10('449', '450', 'results405');looper('.zes');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('tien'), document.getElementById('560'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results405" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zes" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='451'
+                                onkeyup="roundtotal10('451', '452', 'results406');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('elf'), document.getElementById('561'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='452'
+                                onkeyup="roundtotal10('451', '452', 'results406'); looper('.zeven');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('twaalf'), document.getElementById('562'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results406" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig zeven" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='453'
+                                onkeyup="roundtotal20('453', '454', 'results407');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('dertien'), document.getElementById('563'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='454'
+                                onkeyup="roundtotal20('453', '454', 'results407'); looper('.acht');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('veertien'), document.getElementById('564'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results407" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig acht" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier vierspelers" id='455'
+                                onkeyup="roundtotal20('455', '456', 'results408');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zestien'), document.getElementById('565')); adder()"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='456'
+                                onkeyup="roundtotal20('455', '456', 'results408'); looper('.negen');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('55'), document.getElementById('566'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results408" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig negen" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf vierspelers" id='457'
+                                onkeyup="roundtotal20('457', '458', 'results409');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zeventien'), document.getElementById('568'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='458'
+                                onkeyup="roundtotal20('457', '458', 'results409'); looper('.tien');;moveOnMax2(this,document.getElementById('speler5'),document.getElementById('achtien'), document.getElementById('negentien'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results409" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig tien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes vierspelers" id='459'
+                                onkeyup="roundtotal20('459', '460', 'results410');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('negentien'), document.getElementById('569'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='460'
+                                onkeyup="roundtotal20('459', '460', 'results410'); looper('.elf');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('twintig'), document.getElementById('570'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results410" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig elf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='461'
+                                onkeyup="roundtotal20('461', '462', 'results411');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('eenentwintig'), document.getElementById('571'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='462'
+                                onkeyup="roundtotal20('461', '462', 'results411'); looper('.twaalf');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('tweeentwintig'), document.getElementById('572'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results411" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig twaalf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier vierspelers" id='463'
+                                onkeyup="roundtotal20('463', '464', 'results412');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vierentwintig'), document.getElementById('573')); adder()"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='464'
+                                onkeyup="roundtotal20('463', '464', 'results412'); looper('.dertien');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('63'), document.getElementById('574'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results412" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien dertien vierspelers" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='465'
+                                onkeyup="roundtotal10('465', '466', 'results413');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vijfentwintig'), document.getElementById('575'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='466'
+                                onkeyup="roundtotal10('465', '466', 'results413'); looper('.veertien');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zesentwintig'), document.getElementById('576'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results413" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien veertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf vierspelers" id='467'
+                                onkeyup="roundtotal10('467', '468', 'results414');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zevenentwintig'), document.getElementById('578'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='468'
+                                onkeyup="roundtotal10('467', '468', 'results414'); looper('.vijftien');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('achtentwintig'), document.getElementById('negentwintig'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results414" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijftien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='469'
+                                onkeyup="roundtotal10('469', '470', 'results415');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('negentwintig'), document.getElementById('579'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='470'
+                                onkeyup="roundtotal10('469', '470', 'results415'); looper('.zestien');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('dertig'), document.getElementById('580'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results415" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zestien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvier delenzes vierspelers" id='471'
+                                onkeyup="roundtotal10('471', '472', 'results416');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('tweeendertig'), document.getElementById('581'));adder()"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='472'
+                                onkeyup="roundtotal10('471', '472', 'results416'); looper('.zeventien');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('71'), document.getElementById('582'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results416" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zeventien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='473'
+                                onkeyup="roundtotal10('473', '474', 'results417');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('drieendertig'), document.getElementById('583'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='474'
+                                onkeyup="roundtotal10('473', '474', 'results417'); looper('.achtien');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vierendertig'), document.getElementById('584'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results417" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien achtien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='475'
+                                onkeyup="roundtotal10('475', '476', 'results418');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('vijfendertig'), document.getElementById('585'))"
+                                onblur="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover vierspelers" id='476'
+                                onkeyup="roundtotal10('475', '476', 'results418');moveOnMax2(this,document.getElementById('speler5'),document.getElementById('zesendertig'), document.getElementById('586'))"
+                                onblur="" onchange="getthetotal4()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results418" class="num4"> </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan=3>
+                        <p id="result4" class="totaless" type='text'> <span class="oblique"> </span> </p>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!---------------------------------------------------------------------------Begin van tabel speler 5 ------------------------------------------------------------->
+        <div id="speler5">
+
+            <table class="ex2" border="1">
+
+                <tr>
+                    <td colspan=3>
+                        <input class="remover topname" autocomplete="off" type='text' maxlength='15' id="vijfdenaam">
+                        </input>
+                    </td>
+                </tr>
+
+                <tr class="top">
+                    <td> <span class="fulltext"> Gevraagd</span> <span class="smalltext"> Gv </span></td>
+                    <td> <span class="fulltext"> Gekregen</span> <span class="smalltext"> gk </span></td>
+                    <td> <span class="fulltext"> Punten </span> <span class="smalltext"> pt </span></td>
+                </tr>
+
+                <tr class="nulistien">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='551'
+                                onkeyup="roundtotal10('551', '552', 'results501');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('Eerste'), document.getElementById('661'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='552'
+                                onkeyup="roundtotal10('551', '552', 'results501');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('tweede'), document.getElementById('662'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results501" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien twee" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='553'
+                                onkeyup="roundtotal10('553', '554', 'results502');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('derde'), document.getElementById('663'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='554'
+                                onkeyup="roundtotal10('553', '554', 'results502');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vierde'), document.getElementById('664'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results502" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien drie" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='555'
+                                onkeyup="roundtotal10('555', '556', 'results503');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vijf'), document.getElementById('665'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='556'
+                                onkeyup="roundtotal10('555', '556', 'results503');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zes'), document.getElementById('666'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results503" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vier" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='557'
+                                onkeyup="roundtotal10('557', '558', 'results504');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zeven'), document.getElementById('667'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='558'
+                                onkeyup="roundtotal10('557', '558', 'results504');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('acht'), document.getElementById('668'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results504" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf delenzes" id='559'
+                                onkeyup="roundtotal10('559', '560', 'results505');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('tien'), document.getElementById('669'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='560'
+                                onkeyup="roundtotal10('559', '560', 'results505');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('49'), document.getElementById('670'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results505" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zes" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='561'
+                                onkeyup="roundtotal10('561', '562', 'results506');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('elf'), document.getElementById('671'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='562'
+                                onkeyup="roundtotal10('561', '562', 'results506');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('twaalf'), document.getElementById('672'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results506" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig zeven" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='563'
+                                onkeyup="roundtotal20('563', '564', 'results507');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('dertien'), document.getElementById('673'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='564'
+                                onkeyup="roundtotal20('563', '564', 'results507');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('veertien'), document.getElementById('674'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results507" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig acht" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='565'
+                                onkeyup="roundtotal20('565', '566', 'results508');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vijftien'), document.getElementById('675'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='566'
+                                onkeyup="roundtotal20('565', '566', 'results508');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zestien'), document.getElementById('676'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results508" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig negen" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='567'
+                                onkeyup="roundtotal20('567', '568', 'results509');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zeventien'), document.getElementById('677'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='568'
+                                onkeyup="roundtotal20('567', '568', 'results509');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('achtien'), document.getElementById('678'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results509" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig tien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='569'
+                                onkeyup="roundtotal20('569', '570', 'results510');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('twintig'), document.getElementById('679'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='570'
+                                onkeyup="roundtotal20('569', '570', 'results510');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('59'), document.getElementById('680'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results510" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig elf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='571'
+                                onkeyup="roundtotal20('571', '572', 'results511');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('eenentwintig'), document.getElementById('681'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='572'
+                                onkeyup="roundtotal20('571', '572', 'results511');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('tweeentwintig'), document.getElementById('682'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results511" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig twaalf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='573'
+                                onkeyup="roundtotal20('573', '574', 'results512');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('drieentwintig'), document.getElementById('683'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='574'
+                                onkeyup="roundtotal20('573', '574', 'results512');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vierentwintig'), document.getElementById('684'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results512" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien dertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='575'
+                                onkeyup="roundtotal10('575', '576', 'results513');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vijfentwintig'), document.getElementById('685'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='576'
+                                onkeyup="roundtotal10('575', '576', 'results513');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zesentwintig'), document.getElementById('686'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results513" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien veertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='577'
+                                onkeyup="roundtotal10('577', '578', 'results515');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zevenentwintig'), document.getElementById('687'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='578'
+                                onkeyup="roundtotal10('577', '578', 'results514');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('achtentwintig'), document.getElementById('688'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results514" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijftien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenvijf" id='579'
+                                onkeyup="roundtotal10('579', '580', 'results515');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('dertig'), document.getElementById('689'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='580'
+                                onkeyup="roundtotal10('579', '580', 'results515');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('69'), document.getElementById('690'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results515" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zestien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='581'
+                                onkeyup="roundtotal10('581', '582', 'results516');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('eenendertig'), document.getElementById('691'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='582'
+                                onkeyup="roundtotal10('581', '582', 'results516');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('tweeendertig'), document.getElementById('692'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results516" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zeventien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='583'
+                                onkeyup="roundtotal10('583', '584', 'results517');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('drieendertig'), document.getElementById('693'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='584'
+                                onkeyup="roundtotal10('583', '584', 'results517');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vierendertig'), document.getElementById('694'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results517" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien achtien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='585'
+                                onkeyup="roundtotal10('585', '586', 'results518');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('vijfendertig'), document.getElementById('695'))"
+                                onblur="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='586'
+                                onkeyup="roundtotal10('585', '586', 'results518');moveOnMax2(this,document.getElementById('speler6'),document.getElementById('zesendertig'), document.getElementById('696'))"
+                                onblur="" onchange="getthetotal5()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results518" class="num5"> </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan=3>
+                        <p id="result5" class="totaless" type='text'> <span class="oblique"> </span> </p>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!---------------------------------------------------------------------------Begin van tabel speler 6 ------------------------------------------------------------->
+        <div id="speler6">
+
+            <table class="ex2" border="1">
+
+                <tr>
+                    <td colspan=3>
+                        <input class="remover topname" autocomplete="off" type='text' maxlength='15' id="zesdenaam"
+                            class="topname">
+                        </input>
+                    </td>
+                </tr>
+
+                <tr class="top">
+                    <td> <span class="fulltext"> Gevraagd</span> <span class="smalltext"> Gv </span></td>
+                    <td> <span class="fulltext"> Gekregen</span> <span class="smalltext"> gk </span></td>
+                    <td> <span class="fulltext"> Punten </span> <span class="smalltext"> pt </span></td>
+                </tr>
+
+                <tr class="nulistien">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='661'
+                                onkeyup="roundtotal10('661', '662', 'results601'); moveOnMax(this,document.getElementById('tweede'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='662'
+                                onkeyup="roundtotal10('661', '662', 'results601') ; moveOnMax(this,document.getElementById('derde'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results601" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien twee" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='663'
+                                onkeyup="roundtotal10('663', '664', 'results602'); moveOnMax(this,document.getElementById('vierde'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='664'
+                                onkeyup="roundtotal10('663', '664', 'results602'); moveOnMax(this,document.getElementById('vijf'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results602" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien drie" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='665'
+                                onkeyup="roundtotal10('665', '666', 'results603'); moveOnMax(this,document.getElementById('zes'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='666'
+                                onkeyup="roundtotal10('665', '666', 'results603'); moveOnMax(this,document.getElementById('zeven'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results603" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vier" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='667'
+                                onkeyup="roundtotal10('667', '668', 'results604'); moveOnMax(this,document.getElementById('acht'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='668'
+                                onkeyup="roundtotal10('667', '668', 'results604'); moveOnMax(this,document.getElementById('negen'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results604" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='669'
+                                onkeyup="roundtotal10('669', '670', 'results605'); moveOnMax(this,document.getElementById('tien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='670'
+                                onkeyup="roundtotal10('669', '670', 'results605'); moveOnMax(this,document.getElementById('elf'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results605" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zes" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='671'
+                                onkeyup="roundtotal10('671', '672', 'results606'); moveOnMax(this,document.getElementById('twaalf'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='672'
+                                onkeyup="roundtotal10('671', '672', 'results606'); moveOnMax(this,document.getElementById('dertien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results606" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig zeven" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='673'
+                                onkeyup="roundtotal20('673', '674', 'results607'); moveOnMax(this,document.getElementById('veertien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='674'
+                                onkeyup="roundtotal20('673', '674', 'results607'); moveOnMax(this,document.getElementById('vijftien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results607" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig acht" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='675'
+                                onkeyup="roundtotal20('675', '676', 'results608'); moveOnMax(this,document.getElementById('zestien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='676'
+                                onkeyup="roundtotal20('675', '676', 'results608'); moveOnMax(this,document.getElementById('zeventien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results608" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig negen" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='677'
+                                onkeyup="roundtotal20('677', '678', 'results609'); moveOnMax(this,document.getElementById('achtien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='678'
+                                onkeyup="roundtotal20('677', '678', 'results609'); moveOnMax(this,document.getElementById('negentien'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results609" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig tien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='679'
+                                onkeyup="roundtotal20('679', '680', 'results610'); moveOnMax(this,document.getElementById('twintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='680'
+                                onkeyup="roundtotal20('679', '680', 'results610'); moveOnMax(this,document.getElementById('eenentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results610" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig elf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='681'
+                                onkeyup="roundtotal20('681', '682', 'results611'); moveOnMax(this,document.getElementById('tweeentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='682'
+                                onkeyup="roundtotal20('681', '682', 'results611'); moveOnMax(this,document.getElementById('drieentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results611" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistwintig twaalf" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='683'
+                                onkeyup="roundtotal20('683', '684', 'results612'); moveOnMax(this,document.getElementById('vierentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='684'
+                                onkeyup="roundtotal20('683', '684', 'results612'); moveOnMax(this,document.getElementById('vijfentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results612" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien dertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='685'
+                                onkeyup="roundtotal10('685', '686', 'results613'); moveOnMax(this,document.getElementById('zesentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='686'
+                                onkeyup="roundtotal10('685', '686', 'results613'); moveOnMax(this,document.getElementById('zevenentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results613" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien veertien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='687'
+                                onkeyup="roundtotal10('687', '688', 'results616'); moveOnMax(this,document.getElementById('achtentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='688'
+                                onkeyup="roundtotal10('687', '688', 'results614'); moveOnMax(this,document.getElementById('negentwintig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results614" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien vijftien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='689'
+                                onkeyup="roundtotal10('689', '690', 'results615'); moveOnMax(this,document.getElementById('dertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='690'
+                                onkeyup="roundtotal10('689', '690', 'results615'); moveOnMax(this,document.getElementById('eenendertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results615" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zestien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='691'
+                                onkeyup="roundtotal10('691', '692', 'results616'); moveOnMax(this,document.getElementById('tweeendertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='692'
+                                onkeyup="roundtotal10('691', '692', 'results616'); moveOnMax(this,document.getElementById('drieendertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results616" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien zeventien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='693'
+                                onkeyup="roundtotal10('693', '694', 'results617'); moveOnMax(this,document.getElementById('vierendertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='694'
+                                onkeyup="roundtotal10('693', '694', 'results617'); moveOnMax(this,document.getElementById('vijfendertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results617" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr class="nulistien achtien" STYLE="visibility: hidden;">
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover delenzes" id='695'
+                                onkeyup="roundtotal10('695', '696', 'results618'); moveOnMax(this,document.getElementById('zesendertig'))"
+                                onblur="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='form-uname'>
+                            <label for='nameField2'></label>
+                            <input class="remover" id='696'
+                                onkeyup="roundtotal10('695', '696', 'results618'); moveOnMax(this,document.getElementById('Eerste'))"
+                                onblur="" onchange="getthetotal6()" type='text' maxlength='1'></input>
+                        </div>
+                    </td>
+                    <td>
+                        <p id="results618" class="num6"> </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan=3>
+                        <p id="result6" class="totaless" type='text'> <span class="oblique"> </span> </p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+    <script src="gamejs.js"></script>
+    <script>
+
+        const { ipcRenderer } = require('electron');
+        const closeApp = document.getElementById('closeApp');
+        closeApp.addEventListener('click', () => {
+            ipcRenderer.send('close-me')
+        });
+
+    </script>
+
+</body>
+
+</html>
